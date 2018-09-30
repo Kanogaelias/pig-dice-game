@@ -12,11 +12,30 @@
 </head>
 
 <body>
-    <div id="particles-js">
-        <div class="coming-soon">
-            <p>Coming Soon</p>
-        </div>
+    <div class="wrapper clearfix">
+         <div class="player-panel-1"> <!--Beginning of first player panel -->
+            <div class="yourturn"></div>
+            <div class="player-name" id="player-1">Player 1</div>
+            <div class="player-score" id="score-1">20</div>
+            <div class="current-player-box">
+                <div class="current-player-label">Current Score</div>
+                <div class="current-player-score" id="current-score-1">10</div>
+            </div>
+        </div> <!--End of first player panel -->
+
+        <div class="player-panel-2"> <!--Beginning of second player panel -->
+            <div class="yourturn"></div>
+            <div class="player-name" id="player-2">Player 2</div>
+            <div class="player-score" id="score-2">10</div>
+            <div class="current-player-box">
+                <div class="current-player-label">Current Score</div>
+                <div class="current-player-score" id="current-score-2">5</div>
+            </div>
+        </div> <!--End of second player panel -->
     </div>
+    <button class="btn btn-new">New Game</button>
+
+
     <script src="js/scripts.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
@@ -135,7 +154,7 @@
             "retina_detect": true
         });
 
-        requestAnimationFrame();
+        
 
 
     </script>
