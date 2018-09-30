@@ -12,7 +12,7 @@
   clear: both;
 }
 body {
-  background-image: url(images/bgr.png);
+  background-image: url("/images/bgr.png");
   background-size: cover;
   background-position: center;
   font-family: "Quicksand", sans-serif;
@@ -21,7 +21,8 @@ body {
   height: 100vh;
   color: #555;
 }
-.wrapper {
+.wrapper,
+.wrapper-1{
     width: 1000px;
     padding: 30px 50px 30px 30px;
     position: absolute;
@@ -34,14 +35,91 @@ body {
     border-radius: 8px;
 }
 
+#wrapper-position{
+    top: 50%;
+    left: 50%;
+    
+}
+
 .player-panel-1,
 .player-panel-2 {
     width: 50%;
     float: left;
-    height: 400px;
+    height: 500px;
     padding: 100px;
     position: relative;
 }
 
 
 /* Player Panels */
+
+.player-name{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 0%;
+}
+
+.player-name#player-1{
+    margin-top:-100px;
+}
+
+.player-name#player-2{
+    margin-top: -100px;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #636262;
+    margin-bottom: 250px;
+}
+
+.active {
+    background-color: #ffcccc;
+}
+.active.player-name{
+    font-weight: 250;
+}
+
+.active .yourturn{
+    background: url("/images/animated-dice-image.gif") no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: 30px 30px;
+    position: absolute;
+    color: #EB4D4D;
+
+}
+
+.active.player-panel-1 .yourturn {
+    top: 5px;
+    left: 5px;
+}
+.active.player-panel-2 .yourturn {
+    top: 5px;
+    left: 5px;
+}
+
+.current-player-box{
+    color: #636262;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.current-player-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #636262;
+}
+
+.current-player-score {
+    font-size: 30px;
+}
