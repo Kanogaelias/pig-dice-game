@@ -1,0 +1,47 @@
+/* General CSS Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  background-image: url(images/bgr.png);
+  background-size: cover;
+  background-position: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  position: relative;
+  height: 100vh;
+  color: #555;
+}
+.wrapper {
+    width: 1000px;
+    padding: 30px 50px 30px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 55%;
+    background-color: #ffff;
+    box-shadow: 0px 10px 50px #000000;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.player-panel-1,
+.player-panel-2 {
+    width: 50%;
+    float: left;
+    height: 400px;
+    padding: 100px;
+    position: relative;
+}
+
+
+/* Player Panels */
