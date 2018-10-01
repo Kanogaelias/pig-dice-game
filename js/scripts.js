@@ -1,15 +1,16 @@
-//BUSINESS LOGIC
+// //BUSINESS LOGIC
 
-var scores, roundScore, activePlayer, dice, gameplaying;
+var scores, roundScore, activePlayer, dice, gamePlaying;
 init();
 function nextPlayer() {
+  //next player
   activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
   roundScore = 0;
-  $("#current-score-1").text("0");
-  $("#current-score-2").text("0");
+  $("#current-1").text("0");
+  $("#current-2").text("0");
 
-  $(".player-panel-1").toggleClass("active");
-  $(".player-panel-2").toggleClass("active");
+  $(".player-0-panel").toggleClass("active");
+  $(".player-1-panel").toggleClass("active");
 
   $(".dice").css("display", "none");
 }
@@ -24,16 +25,18 @@ function init() {
   $(".dice").css("display", "none");
   $("#score-1").text("0");
   $("#score-2").text("0");
-  $("#current-score-1").text("0");
-  $("#current-score-2").text("0");
-  $("#player-1").text("Player 1");
-  $("#player-2").text("Player 2");
-  $(".player-panel-1").removeClass("winner");
-  $(".player-panel-2").removeClass("winner");
-  $(".player-panel-1").removeClass("active");
-  $(".player-panel-2").removeClass("active");
-  $(".player-panel-1").addClass("active");
+  $("#current-1").text("0");
+  $("#current-2").text("0");
+  $("#name-1").text("Player 1");
+  $("#name-2").text("Player 2");
+  $(".player-0-panel").removeClass("winner");
+  $(".player-1-panel").removeClass("winner");
+  $(".player-0-panel").removeClass("active");
+  $(".player-1-panel").removeClass("active");
+  $(".player-0-panel").addClass("active");
 }
+
+//USER INTERFACE
 
 $(".btn-roll-dice").click(function() {
   if (gamePlaying) {
@@ -41,17 +44,16 @@ $(".btn-roll-dice").click(function() {
 
     var diceDOM = $(".dice");
     diceDOM.css("display", "block");
-    diceDOM.attr("src", "images/dice-" + dice + ".png");
+    diceDOM.attr("src", "img/dice-" + dice + ".png");
 
     if (dice !== 1) {
       roundScore += dice;
-      $("#current-score-" + activePlayer).text(roundScore);
+      $("#current-" + activePlayer).text(roundScore);
     } else {
       nextPlayer();
     }
   }
 });
-
 $(".btn-hold").click(function() {
   0;
   if (gamePlaying) {
@@ -59,10 +61,10 @@ $(".btn-hold").click(function() {
     $("#score-" + activePlayer).text(scores[activePlayer]);
     //check if player won the game
     if (scores[activePlayer] >= 50) {
-      $("#player-" + activePlayer).text("You Won!");
+      $("#name-" + activePlayer).text("Winner!");
       $(".dice").css("display", "none");
-      $(".player-panel" + activePlayer + "").addClass("winner");
-      $(".player-panel" + activePlayer + "").addClass("active");
+      $(".player-" + activePlayer + "-panel").addClass("winner");
+      $(".player-" + activePlayer + "-panel").addClass("active");
       gamePlaying = false;
     } else {
       nextPlayer();
