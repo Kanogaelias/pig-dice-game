@@ -242,3 +242,40 @@ button:focus {
   font-weight: 300;
   color: #eb4d4d;
 }
+
+.footer {
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  padding: 1%;
+  width: 100%;
+  height: 20%;
+  left: 0%;
+  color: #ffd700;
+  text-align: center;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+ul.list-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.list-icons li {
+  display: inline-block;
+  width: 3em;
+  height: 2em;
+}
+
+.list-icons a{
+  color: #ffd700;
+}
+
+.list-icons a:hover{
+  transition: all ease 0.3s;
+  color: white;
+  text-decoration: none;
+
+}
