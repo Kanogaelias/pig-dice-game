@@ -1,5 +1,7 @@
 /* General CSS Styles */
 
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,14 +14,21 @@
   clear: both;
 }
 body {
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
   background-size: cover;
   background-position: center;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 300;
   position: relative;
   height: 100vh;
-  color: #555;
+  color: #000000;
 }
 .wrapper,
 .wrapper-1 {
@@ -27,8 +36,8 @@ body {
   padding: 30px 50px 30px 30px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 35%;
-  left: 55%;
+  top: 45%;
+  left: 50%;
   background-color: #ffff;
   box-shadow: 0px 10px 50px #000000;
   overflow: hidden;
@@ -38,10 +47,13 @@ body {
 .wrapper {
   height: 300px;
   line-height: 24px;
+  text-align: justify;
+  font-family: 'Karla', sans-serif;
 }
 
 .wrapper h1 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .wrapper a {
@@ -54,8 +66,8 @@ body {
   left: 50%;
 }
 
-.player-panel-1,
-.player-panel-2 {
+.player-0-panel,
+.player-1-panel {
   width: 50%;
   float: left;
   height: 500px;
@@ -76,11 +88,11 @@ body {
   padding-top: 0%;
 }
 
-.player-name#player-1 {
+.player-name#name-1 {
   margin-top: -100px;
 }
 
-.player-name#player-2 {
+.player-name#name-2 {
   margin-top: -100px;
 }
 
@@ -88,19 +100,19 @@ body {
   text-align: center;
   font-size: 80px;
   font-weight: 100;
-  color: #636262;
+  color: #000000;
   margin-bottom: 250px;
 }
 
 .active {
-  background-color: #ffcccc;
+  background-color: #4fafe7;
 }
 .active.player-name {
   font-weight: 250;
 }
 
 .active .yourturn {
-  background: url("/images/animated-dice-image.gif") no-repeat;
+  background: url("/img/animated-dice-image.gif") no-repeat;
   width: 50px;
   height: 50px;
   background-size: 30px 30px;
@@ -108,17 +120,17 @@ body {
   color: #eb4d4d;
 }
 
-.active.player-panel-1 .yourturn {
-  top: 5px;
-  left: 5px;
+.active.player-0-panel .yourturn {
+  top: 10px;
+  left: 10px;
 }
-.active.player-panel-2 .yourturn {
-  top: 5px;
-  left: 5px;
+.active.player-1-panel .yourturn {
+  top: 10px;
+  right: 10px;
 }
 
 .current-player-box {
-  color: #636262;
+  color: #000000;
   width: 40%;
   margin: 0 auto;
   text-align: center;
@@ -128,7 +140,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
   font-size: 12px;
-  color: #636262;
+  color: #000000;
 }
 
 .current-player-score {
@@ -143,7 +155,7 @@ button {
   color: #555;
   background: none;
   border: none;
-  font-family: Lato;
+  font-family: 'Karla', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
@@ -175,7 +187,7 @@ button:focus {
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Karla', sans-serif;
   cursor: pointer;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
@@ -224,7 +236,7 @@ button:focus {
 }
 
 .winner {
-  background-color: #ffcccc;
+  background-color: #fffeccfd;
 }
 .winner .player-name {
   font-weight: 300;
